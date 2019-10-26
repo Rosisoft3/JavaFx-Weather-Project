@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="325.0" style="-fx-background-color: #f1f8f9; -fx-background-radius: 10 10 10 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rosisoft.weatherproject.app.controller.MainController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="460.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Region prefHeight="69.0" prefWidth="325.0" />
+            <Label fx:id="text_Date" text="Day ,Month  15th" textFill="#8d9396">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Label>
+            <Region prefHeight="0.0" prefWidth="400.0" />
+            <Label fx:id="text_Time" text="14:15 PM" textFill="#111111">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </Label>
+            <Region prefHeight="8.0" prefWidth="325.0" />
+            <ImageView fx:id="img_Weather" fitHeight="143.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icon_sun.png" />
+               </image></ImageView>
+            <Region prefHeight="18.0" prefWidth="400.0" />
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="text_SunRise" text="SunRise" textFill="#bac2c6">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="33.0" prefWidth="8.0" />
+                  <ImageView fitHeight="13.0" fitWidth="29.0">
+                     <image>
+                        <Image url="@../icons/weather_sunset.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="33.0" prefWidth="4.0" />
+                  <Label fx:id="text_SunSet" text="SunSet" textFill="#bac2c6">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="text_Temperature" prefHeight="72.0" prefWidth="93.0" text="28°" textFill="#8d9396">
+                     <font>
+                        <Font name="Tahoma" size="46.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="150.0" prefWidth="6.0" />
+                  <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="156.0">
+                     <children>
+                        <Label fx:id="text_WeatherDescription" text="Clear Sky" textFill="#bac2c6">
+                           <font>
+                              <Font name="Tahoma" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="text_City" text="Sicklerville, New Jersey " textFill="#a2a9ad">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Region prefHeight="9.0" prefWidth="400.0" />
+            <HBox alignment="CENTER" prefHeight="130.0" prefWidth="400.0" style="-fx-background-color: #2e3335; -fx-background-radius: 0 0 10 10;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../icons/weather_wind.png" />
+                           </image>
+                        </ImageView>
+                        <Region prefHeight="150.0" prefWidth="6.0" />
+                        <Label fx:id="text_Wind" text="Wind" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../icons/weather_pressure.png" />
+                           </image>
+                        </ImageView>
+                        <Region prefHeight="150.0" prefWidth="6.0" />
+                        <Label fx:id="text_Precipitation" text="Precipitation" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../icons/weather_wet.png" />
+                           </image>
+                        </ImageView>
+                        <Region prefHeight="150.0" prefWidth="6.0" />
+                        <Label fx:id="text_Humidity" text="Humidity" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="29.0" fitWidth="29.0" onMousePressed="#onMousePressedClose" pickOnBounds="true" preserveRatio="true" x="10.0" y="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../icons/icon_shutdown.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ToggleButton fx:id="toggleButton_Conversion" layoutX="205.0" layoutY="-8.0" mnemonicParsing="false" onAction="#onActionConversion" prefHeight="30.0" prefWidth="30.0" text="°F" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>
